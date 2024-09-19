@@ -1,13 +1,12 @@
-import "./Button.css"
 interface ButtonProps {
   text: string;
-
+  className?: string;
 }
 
-const Button = ({ text }: ButtonProps) => {
+const Button = ({ text, className }: ButtonProps) => {
 
   return (
-    <button className="button w-12 h-9">{text}</button>
+    <button className={className}>{text}</button>
   )
 
 }
