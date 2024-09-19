@@ -1,4 +1,4 @@
-
+import "./Button.css"
 interface ButtonProps {
   text: string;
 
@@ -7,7 +7,7 @@ interface ButtonProps {
 const Button = ({ text }: ButtonProps) => {
 
   return (
-    <button>{text}</button>
+    <button className="button w-12 h-9">{text}</button>
   )
 
 }
