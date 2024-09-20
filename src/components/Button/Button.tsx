@@ -1,3 +1,4 @@
+import "../../components/Button/Button.css"
 interface ButtonProps {
   text: string;
   className?: string;
