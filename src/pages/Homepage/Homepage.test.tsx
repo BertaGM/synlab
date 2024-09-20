@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import { describe, expect, test } from "vitest";
 import Homepage from "./Homepage";
 
 describe("Given a Homepage component", () => {
