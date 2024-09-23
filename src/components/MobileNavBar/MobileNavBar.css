@@ -1,0 +1,7 @@
+.mobile-navbar {
+  background-color: #979a99;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
