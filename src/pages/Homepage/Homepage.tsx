@@ -6,9 +6,10 @@ import Sidebar from "../../components/DesktopSidebar/DesktopSidebar";
 import MobileNavBar from "../../components/MobileNavBar/MobileNavBar";
 import Button from "../../components/Button/Button";
 import "./Homepage.css";
+import Loading from "../../components/Loading/Loading";
 
 const Homepage = () => {
-  const characters = useCharactersApi();
+  const { characters, loading } = useCharactersApi();
   const [isDesktopWidth, setIsDesktopWidth] = useState(false);
   const [canSidebarBeShown, setCanSidebarBeShown] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -39,6 +40,10 @@ const Homepage = () => {
     }
   }, []);
 
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <main>
       {!isDesktopWidth && <MobileNavBar />}
@@ -51,8 +56,8 @@ const Homepage = () => {
             onClick={toggleSidebar}
           />
         )}
-        <h1 className="title">Game of Thrones Characters</h1>
       </div>
+      <h1 className="title">Game of Thrones Characters</h1>
       <List characters={characters} />
       <Button className="button" text="Previous" />
       <Button className="button" text="Next" />

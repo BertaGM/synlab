@@ -7,8 +7,6 @@ interface ListProps {
 }
 
 const List = ({ characters }: ListProps) => {
-  
-
   return (
     <ul className="cards">
       {characters.map((character) => (

@@ -8,12 +8,19 @@ interface CardProps {
 const Card = ({ character }: CardProps) => {
   return (
     <div className="card">
-      <img src={character.imageUrl} alt={character.fullName} width="100" />
-      <h3>{character.fullName}</h3>
-      <span>{character.title}</span>
-      <span>{character.family}</span>
+      <img
+        className="card-image"
+        src={character.imageUrl}
+        alt={character.fullName}
+        width="100"
+      />
+      <div className="character-text">
+        <h3 className="character-name">{character.fullName}</h3>
+        <span className="character-title">{character.title}</span>
+        <span className="character-family">{character.family}</span>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Card;
