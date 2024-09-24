@@ -14,7 +14,7 @@ const Card = ({ character }: CardProps) => {
         width="100"
       />
       <div className="flex flex-col items-center">
-        <h3 className="character-name">{character.fullName}</h3>
+        <h3 className="uppercase mt-4 font-bold">{character.fullName}</h3>
         <span className="character-title">{character.title}</span>
         <span className="character-family">{character.family}</span>
       </div>
