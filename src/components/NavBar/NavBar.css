@@ -1,13 +1,9 @@
-.nav-menu {
-  .options {
-    .option {
-      position: relative;
-      top: 80px;
+.option {
+  position: relative;
+  top: 80px;
 
-      @media (max-width: 686px) {
-        top: 0;
-      }
-    }
+  @media (max-width: 686px) {
+    top: 0;
   }
 }
 
