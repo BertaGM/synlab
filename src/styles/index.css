@@ -2,37 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-  *,
-  ::before,
-  ::after {
-    box-sizing: border-box;
-  }
+:root {
+  --main-navbar-bg-color: #979a99;
+}
 
-  body,
-  h1,
-  h2 {
-    margin: 0;
-  }
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
 
-  ul,
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+body,
+h1,
+h2 {
+  margin: 0;
+}
 
-  img {
-    max-width: 100%;
-  }
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+img {
+  max-width: 100%;
+}
 
-  button {
-    border: none;
-    background-color: transparent;
-    font: inherit;
-    cursor: pointer;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+}

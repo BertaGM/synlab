@@ -1,5 +1,5 @@
 .mobile-navbar {
-  background-color: #979a99;
+  background-color: var(--main-navbar-bg-color);
   position: fixed;
   bottom: 0;
   width: 100%;
