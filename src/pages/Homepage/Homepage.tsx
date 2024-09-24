@@ -10,6 +10,7 @@ import Loading from "../../components/Loading/Loading";
 
 const Homepage = () => {
   const { characters, loading } = useCharactersApi();
+  const [currentPage, setCurrentPage] = useState(1);
   const [isDesktopWidth, setIsDesktopWidth] = useState(false);
   const [canSidebarBeShown, setCanSidebarBeShown] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -40,6 +41,27 @@ const Homepage = () => {
     }
   }, []);
 
+  const charactersPerPage: number = 10;
+
+  const totalPages = Math.ceil(characters.length / charactersPerPage);
+
+  const currentCharacters = characters.slice(
+    (currentPage - 1) * charactersPerPage,
+    currentPage * charactersPerPage,
+  );
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+
   return (
     <main>
       {!isDesktopWidth && <MobileNavBar />}
@@ -55,9 +77,21 @@ const Homepage = () => {
       </div>
       <h1 className="title">Game of Thrones Characters</h1>
       {loading && <Loading />}
-      <List characters={characters} />
-      <Button className="button" text="Previous" />
-      <Button className="button" text="Next" />
+      <List characters={currentCharacters} />
+      <div className="pagination-button">
+        <Button
+          className="button"
+          text="Previous"
+          onClick={handlePreviousPage}
+          disabled={currentPage === 1}
+        />
+        <Button
+          className="button"
+          text="Next"
+          onClick={handleNextPage}
+          disabled={currentPage === totalPages}
+        />
+      </div>
     </main>
   );
 };

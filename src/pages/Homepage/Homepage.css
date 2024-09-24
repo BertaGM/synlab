@@ -20,14 +20,24 @@
   }
 }
 
-.pagination {
+.pagination-button {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 300px;
+  z-index: 1;
+
+  @media (max-width: 686px) {
+    bottom: 60px;
+  }
 }
 
 .button {
-  position: fixed;
   background-color: var(--main-navbar-bg-color);
   color: white;
   padding: 10px 20px;
@@ -39,6 +49,12 @@
 
 .button:hover {
   background-color: var(--main-navbar-bg-color);
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .toggle-button {
