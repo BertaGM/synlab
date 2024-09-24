@@ -40,10 +40,6 @@ const Homepage = () => {
     }
   }, []);
 
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
     <main>
       {!isDesktopWidth && <MobileNavBar />}
@@ -58,6 +54,7 @@ const Homepage = () => {
         )}
       </div>
       <h1 className="title">Game of Thrones Characters</h1>
+      {loading && <Loading />}
       <List characters={characters} />
       <Button className="button" text="Previous" />
       <Button className="button" text="Next" />
