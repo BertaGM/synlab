@@ -12,6 +12,6 @@ describe("Given a Homepage component", () => {
       });
 
       expect(button).toBeInTheDocument();
-    })
-  })
-})
+    });
+  });
+});
