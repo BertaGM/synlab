@@ -1,10 +1,11 @@
 .sidebar {
-  position: fixed;
   background-color: var(--main-navbar-bg-color);
+  position: fixed;
   color: white;
   top: 0;
   left: 0;
   height: 100%;
   width: 16rem;
+  padding-left: 20px;
   transition: transform 0.3s ease;
 }

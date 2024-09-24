@@ -5,7 +5,7 @@ const NavBar = () => {
     <nav className="nav-menu">
       <ul className="options">
         <li className="option">
-          <span>Details</span>
+          <span className="text">Details</span>
         </li>
       </ul>
     </nav>
