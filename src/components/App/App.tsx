@@ -1,8 +1,7 @@
-import { Navigate, Route, Routes } from "react-router-dom"
-import Homepage from "../../pages/Homepage/Homepage"
+import { Navigate, Route, Routes } from "react-router-dom";
+import Homepage from "../../pages/Homepage/Homepage";
 
 const App = () => {
-
   return (
     <>
       <Routes>
@@ -13,4 +12,4 @@ const App = () => {
   );
 };
 
-export default App
+export default App;
